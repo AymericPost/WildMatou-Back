@@ -42,7 +42,7 @@ mvn spring-boot:run
 Pour héberger cette chatbox sur votre réseau local :
 
 1) Récupérez votre adresse ip avec par exemple la commande ```ifconfig```.
-2) Rendez vous sur le fichier ```/src/main/resources/application.properties"
+2) Rendez vous sur le fichier ```/src/main/resources/application.properties```
 3) Ajoutez la ligne
 ```Java
 server.adress=XXX.XXX.XXX.XXX
