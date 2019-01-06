@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,13 +19,13 @@ public class Controller {
 	@Autowired
 	MessageRepository repo;
 	
-	@RequestMapping("/send")
-	public Message miaulement(String pseudo, String text) {
-		if (pseudo == null || pseudo == "") pseudo = "Anonyme";
-		if (text == null || text == "") return null;
+	@PostMapping("/send")
+	public Message miaulement(@RequestBody Message miaou) {
+		if (miaou.getPseudo() == null || miaou.getPseudo() == "") miaou.setPseudo( "Anonyme") ;
+		if (miaou.getMessage()  == null || miaou.getMessage() == "") return null;
 		
-		Message miaou = new Message(pseudo, text);
-		return repo.save(miaou);
+		Message saveIt = miaou;
+		return repo.save(saveIt);
 	}
 	
 	@RequestMapping("/get")
@@ -31,14 +33,15 @@ public class Controller {
 		return repo.findAll();
 	}
 	
-
-	public Message miaou(String matou, String miaulement) {
-		Message miaou = new Message(matou, miaulement);
-		return repo.save(miaou);
-	}
-	
-	public Message miaou(String matou, String miaulement, boolean miou) {
-		Message miaou = new Message(matou, miaulement, miou);
-		return repo.save(miaou);
-	}
+// Ces fonctions serviront plus tard, quand il y aura plus à faire avec l'arrivée /send "miaulement(@RequestBody Message miaou)" .
+// Par exemple, avec des fonctionalités appellées avec slash "/", ou un chuchotement(message pour un seul utilisateur).	
+//	public Message miaou(String matou, String miaulement) {
+//		Message miaou = new Message(matou, miaulement);
+//		return repo.save(miaou);
+//	}
+//	
+//	public Message miaou(String matou, String miaulement, boolean miou) {
+//		Message miaou = new Message(matou, miaulement, miou);
+//		return repo.save(miaou);
+//	}
 }
