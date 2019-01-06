@@ -58,7 +58,7 @@ N'oubliez pas de configurer [WildMatou-Front](https://github.com/AymericPost/Wil
 
 ## Evolution du projet
 
-Le seul verbe HTTP utilisé est GET. Dans des futures versions, le vocaburaire HTTP sera étoffé.
+~~Le seul verbe HTTP utilisé est GET.~~ POST est maintenant utilisé pour l'enregistrement de nouveaux messages. Dans des futures versions, le vocaburaire HTTP sera étoffé.
 
 Les prochaines versions incluront :
 
