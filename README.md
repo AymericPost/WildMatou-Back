@@ -29,7 +29,7 @@ mysql -u root -p
 ```SQL
 CREATE DATABASE example_db;
 CREATE USER "springdao"@"localhost" IDENTIFIED BY "Daodada0!";
-GRANT ALL ON example_db.* TO 'exampleuser'@'localhost'; 
+GRANT ALL ON example_db.* TO 'springdao'@'localhost'; 
 ```
 
 ### Compiler l'application
