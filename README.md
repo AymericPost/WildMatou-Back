@@ -64,7 +64,10 @@ Les prochaines versions incluront :
 
 1) Support des smileys (peut être aussi des emojis) avec possibilité de rajouter des smileys personnalisés
 2) Support des liens/url
-3) Support des images
+3) Notification de nouveaux messages
+4) Salons de discussion
+5) Messages privé
+6) Support des images
 
 ## Frameworks utilisés
 
